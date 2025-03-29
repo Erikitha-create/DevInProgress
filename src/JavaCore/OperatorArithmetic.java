@@ -18,5 +18,12 @@ public class OperatorArithmetic {
         double h = (double) g;
         System.out.println(g);
         System.out.println(h);
+
+        int ab = 54;
+        int ac = 4;
+        int ad = 12;
+        int ae = 78;
+        int af = ab - a * ad + ( a * 7 ) + ae / ac;
+        System.out.println(af);
     }
 }

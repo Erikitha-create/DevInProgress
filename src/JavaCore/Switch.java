@@ -35,6 +35,37 @@ public class Switch {
 
         }
 
-        System.out.println(days + "dias");
+        System.out.println(days + " dias");
+
+        // Para um código mais limpo a partir do Java 14 usa-se o Switch Expression
+
+        int month1 = 14;
+        int days1 =switch (month1) {
+
+            case 1, 3, 5, 7, 8, 10, 12 -> 31;
+            case 2 -> 28;
+            case 4, 6, 9, 11 -> 30;
+            default -> {
+                System.out.println("Inválido");
+                yield 0;
+            }
+        };
+
+        System.out.println(days1 + " dias");
+
+
+        int dia = 1;
+
+        String resultado = switch (dia) {
+            case 1 -> {
+                System.out.println("Calculando...");
+                yield "Domingo";
+            }
+            case 2 -> "Segunda";
+            default -> "Outro dia";
+        };
+
+        System.out.println(resultado);
+
     }
 }
